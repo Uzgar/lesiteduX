@@ -56,6 +56,10 @@ nav ul li a {
     font-weight: bold;
 }
 
+.toggle-menu {
+    display: none; /* Masquer le bouton de menu par défaut */
+}
+
 .hero {
     position: relative;
     background-image: url('https://cdn.glitch.global/7fb13921-e9bc-4bd6-8d2a-d533ff38dc80/back.jpg?v=1717697392184');
@@ -178,4 +182,84 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    /* Styles pour la barre de navigation sur mobile */
+
+    .nav-bar {
+        display: none; /* Masquer la barre de navigation par défaut sur mobile */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 200px;
+        height: 100%;
+        padding-top: 60px; /* Ajuster en fonction de la hauteur du header */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-bar.active {
+        transform: translateX(0); /* Afficher le menu latéral lorsque la classe active est ajoutée */
+    }
+
+    .toggle-menu {
+        display: block; /* Afficher le bouton de menu sur mobile */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Styles pour la sidebar */
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -200px; /* Masquer la sidebar par défaut */
+        width: 200px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: left 0.3s ease; /* Animation lors de l'ouverture/fermeture de la sidebar */
+        z-index: 1000;
+    }
+
+    .sidebar nav {
+        margin-top: 60px; /* Ajustez en fonction de la hauteur de l'en-tête */
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar ul li {
+        padding: 20px 20px; /* Espacement entre les boutons */
+    }
+    
+    .sidebar ul li a {
+        display: block; /* Afficher les liens comme des blocs */
+        padding: 10px 20px; /* Espacement à l'intérieur des boutons */
+        background-color: rgba(255, 255, 255, 0.2); /* Couleur de fond des boutons */
+        color: white; /* Couleur du texte */
+        text-decoration: none; /* Supprimer la décoration du lien */
+        font-weight: bold; /* Texte en gras */
+        border-radius: 5px; /* Bordures arrondies */
+        transition: background-color 0.3s ease; /* Animation au survol */
+    }
+    
+    .sidebar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* Couleur de fond au survol */
+    }
+
+    .sidebar.active {
+        left: 0; /* Afficher la sidebar lorsque la classe active est ajoutée */
+    }
 }

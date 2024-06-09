@@ -17,7 +17,8 @@
             <div class="logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Aspect-ratio-4x3.svg/1280px-Aspect-ratio-4x3.svg.png" alt="T">
             </div>
-            <nav>
+            <button class="toggle-menu">&#9776;</button> <!-- Bouton pour ouvrir le menu sur mobile -->
+            <nav class="nav-bar">
                 <ul>
                     <li><a href="#home">Accueil</a></li>
                     <li><a href="#about">À Propos</a></li>
@@ -25,10 +26,25 @@
                     <li><a href="#products">Produits</a></li>
                     <li><a href="#gallery">Galerie</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#schedule">Horaires</a></li> <!-- Nouvelle section Horaires -->
+                    <li><a href="#tarifs">Tarifs</a></li> <!-- Nouvelle section Tarifs -->
                 </ul>
             </nav>
         </div>
     </header>
+    
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <section id="home" class="hero">
@@ -253,6 +269,27 @@
                 delay: 3000, // Temps entre chaque diapositive en millisecondes (3 secondes)
                 disableOnInteraction: false, // Désactive l'autoplay lorsque l'utilisateur interagit avec le carrousel
             },
+        });
+
+                document.addEventListener('DOMContentLoaded', function () {
+            const toggleMenu = document.querySelector('.toggle-menu');
+            const navBar = document.querySelector('.nav-bar');
+            const sidebar = document.querySelector('.sidebar');
+
+            toggleMenu.addEventListener('click', function () {
+                navBar.classList.toggle('active'); // Toggle la classe active sur la barre de navigation
+                sidebar.classList.toggle('active'); // Toggle la classe active sur la sidebar
+            });
+        });
+                // Sélectionnez tous les liens de la sidebar
+        const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
+
+        // Parcourez tous les liens et ajoutez un écouteur d'événements pour détecter les clics
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Fermez la sidebar en retirant la classe active
+                document.querySelector('.sidebar').classList.remove('active');
+            });
         });
     </script>
     

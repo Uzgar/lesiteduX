@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardin Lune Soleil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <!-- CSS de Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- JS de Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Aspect-ratio-4x3.svg/1280px-Aspect-ratio-4x3.svg.png" alt="T">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>Binvnu' chez le Xav</h1>
+                <p>Un endroit où il y que des skims</p>
+            </div>
+        </section>
+
+        <!-- Autres sections de contenu -->
+        <section id="about">
+            <h2>À Propos</h2>
+            <p>oui</p>
+        </section>
+        
+        <section id="services">
+            <h2>Nos Services</h2>
+            <ul>
+                <li>Visites guidées</li>
+                <li>Ateliers de jardinage</li>
+                <li>Événements spéciaux</li>
+                <li>Consultations personnalisées</li>
+            </ul>
+        </section>
+        
+        <section id="gallery">
+            <h2>Galerie</h2>
+            <div class="gallery">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Los_Angeles%2C_Winter_2016%2C4-3.jpg/1024px-Los_Angeles%2C_Winter_2016%2C4-3.jpg" alt="Image 1">
+                <img src="https://eu.community.samsung.com/t5/image/serverpage/image-id/1979747iBD883BDF03F9DD2A/image-size/large/strip-exif-metadata/true?v=v2&px=999" alt="Image 2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkegAjbsqvVe0lx6vE87yc6CAExzrQAtkqBw&s" alt="Image 3">
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Vous pouvez nous contacter de différentes manières :</p>
+            <ul>
+                <li><strong>Téléphone:</strong>+33 06 65 23 56</li>
+                <li><strong>Réseaux Sociaux:</strong> <a href="https://www.facebook.com/votrepage">Facebook</a></li>
+                <li><strong>Email:</strong> <a href="mailto:votreadresse@email.com">votreadresse@email.com</a></li>
+            </ul>
+        </section>
+        <section id="schedule">
+            <h2>Horaires et Disponibilité</h2>
+            <p>Voici notre emploi du temps et nos horaires de disponibilité :</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Heures d'ouverture</th>
+                        <th>Heures de fermeture</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>09:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Mardi</td>
+                        <td>09:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Mercredi</td>
+                        <td>09:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Jeudi</td>
+                        <td>09:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Vendredi</td>
+                        <td>09:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Samedi</td>
+                        <td>10:00</td>
+                        <td>16:00</td>
+                    </tr>
+                    <tr>
+                        <td>Dimanche</td>
+                        <td>Fermé</td>
+                        <td>Fermé</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="tarifs">
+            <h2>Tarifs des Visites</h2>
+            <p>Voici nos tarifs pour les différentes visites que nous proposons :</p>
+            <ul>
+                <li>Visite guidée : 10€ par personne</li>
+                <li>Visite avec atelier de jardinage : 15€ par personne</li>
+                <li>Événements spéciaux : Tarification variable</li>
+                <li>Consultations personnalisées : Sur devis</li>
+            </ul>
+        </section>
+        
+
+        <section id="products">
+            <h2>Nos Produits</h2>
+            <div class="products">
+                <div class="product">
+                    <div class="product-details">
+                        <h3>Produit 1</h3>
+                        <p>Ceci est une courte description du produit 1.</p>
+                        <p class="price">Prix: 20€</p>
+                        <button>Acheter</button>
+                    </div>
+                    <div class="carousel">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aspect_ratio_-_4x3.svg/1200px-Aspect_ratio_-_4x3.svg.png" alt="Produit 1 Image 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://i.ytimg.com/vi/WsYH-8EJ2Oc/maxresdefault.jpg" alt="Produit 1 Image 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJe_Qz5K2qUAi4Wp_bByEclQX18K5Cru60_PecaXt6y1Y3WrnA7esJLXInwBExIZT3JK4&usqp=CAU" alt="Produit 1 Image 3">
+                                </div>
+                                <!-- Ajoutez les autres slides ici au besoin -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-details">
+                        <h3>Produit 2</h3>
+                        <p>Ceci est une courte description du produit 2.</p>
+                        <p class="price">Prix: 25€</p>
+                        <button>Acheter</button>
+                    </div>
+                    <div class="carousel">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aspect_ratio_-_4x3.svg/1200px-Aspect_ratio_-_4x3.svg.png" alt="Produit 2 Image 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://i.ytimg.com/vi/WsYH-8EJ2Oc/maxresdefault.jpg" alt="Produit 2 Image 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJe_Qz5K2qUAi4Wp_bByEclQX18K5Cru60_PecaXt6y1Y3WrnA7esJLXInwBExIZT3JK4&usqp=CAU" alt="Produit 2 Image 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product">
+                    <div class="product-details">
+                        <h3>Produit 3</h3>
+                        <p>Ceci est une courte description du produit 3.</p>
+                        <p class="price">Prix: 30€</p>
+                        <button>Acheter</button>
+                    </div>
+                    <div class="carousel">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aspect_ratio_-_4x3.svg/1200px-Aspect_ratio_-_4x3.svg.png" alt="Produit 3 Image 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://i.ytimg.com/vi/WsYH-8EJ2Oc/maxresdefault.jpg" alt="Produit 3 Image 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJe_Qz5K2qUAi4Wp_bByEclQX18K5Cru60_PecaXt6y1Y3WrnA7esJLXInwBExIZT3JK4&usqp=CAU" alt="Produit 3 Image 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- rajouter ici -->
+            <div class="product">
+                <div class="product-details">
+                    <h3>Produit 2</h3>
+                    <p>Ceci est une courte description du produit 2.</p>
+                    <p class="price">Prix: 25€</p>
+                    <button>Acheter</button>
+                </div>
+                <div class="carousel">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Aspect_ratio_-_4x3.svg/1200px-Aspect_ratio_-_4x3.svg.png" alt="Produit 2 Image 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://i.ytimg.com/vi/WsYH-8EJ2Oc/maxresdefault.jpg" alt="Produit 2 Image 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJe_Qz5K2qUAi4Wp_bByEclQX18K5Cru60_PecaXt6y1Y3WrnA7esJLXInwBExIZT3JK4&usqp=CAU" alt="Produit 2 Image 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ici -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Madec Corporation. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Option de configuration
+            slidesPerView: 1, // Nombre de slides visibles à la fois
+            spaceBetween: 30, // Espace entre les slides
+            loop: true, // Activer la lecture en boucle
+            autoplay: {
+                delay: 3000, // Temps entre chaque diapositive en millisecondes (3 secondes)
+                disableOnInteraction: false, // Désactive l'autoplay lorsque l'utilisateur interagit avec le carrousel
+            },
+        });
+    </script>
+    
+</body>
+</html>
